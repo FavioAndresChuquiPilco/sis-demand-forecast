@@ -1,0 +1,33 @@
+# Datos grandes — NO subir a GitHub
+data/raw/
+data/processed/sis_consolidado.parquet
+data/processed/sis_features.parquet
+data/outputs/predicciones_test.parquet
+
+# Modelos grandes
+models/rf_model.pkl
+
+# Scripts de generación (solo locales)
+generar_dashboard_data.py
+generar_taf.py
+recalcular_reports.py
+runner_notebooks.py
+runner_log.txt
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+.claude/
+
+# Windows
+Thumbs.db
+desktop.ini

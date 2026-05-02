@@ -1,0 +1,15 @@
+analisis,metrica,valor
+PCA,n_componentes_90pct_varianza,6
+PCA,varianza_PC1,0.181
+PCA,varianza_PC2,0.1751
+PCA,varianza_acumulada_n90,1.0
+VIF,max_VIF,1.007
+VIF,feature_max_VIF,REGION_ENC
+VIF,sin_multicolinealidad_severa,True
+RF_preliminar,top_feature,DESC_SERVICIO_ENC
+RF_preliminar,R2_muestra,0.598
+RF_preliminar,importancias,"{'REGION_ENC': np.float64(0.0329), 'NIVEL_EESS_ENC': np.float64(0.2014), 'DESC_SERVICIO_ENC': np.float64(0.6621), 'GRUPO_EDAD_ENC': np.float64(0.0808), 'SEXO_ENC': np.float64(0.0126), 'PERIODO_NUM': np.float64(0.0102)}"
+cold_start,total_keys_unicas,1579
+cold_start,keys_nuevas_P8_P9,92
+cold_start,pct_cold_start,5.83
+clustering,n_clusters_explorado,4

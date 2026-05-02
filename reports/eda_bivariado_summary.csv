@@ -1,0 +1,6 @@
+variable,test,estadistico,p_value,significativo,interpretacion,n_categorias
+NIVEL_EESS,Kruskal-Wallis,165920.59,0.0,True,***,4
+GRUPO_EDAD,Kruskal-Wallis,657543.56,0.0,True,***,6
+REGION,Kruskal-Wallis,268560.5,0.0,True,***,26
+SEXO,Mann-Whitney U,45818065417528.0,0.0,True,***,2
+SEMESTRE,Mann-Whitney U,44282265462201.0,3.2425e-150,True,***,2
