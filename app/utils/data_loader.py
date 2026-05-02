@@ -4,7 +4,7 @@ import pickle
 import streamlit as st
 from pathlib import Path
 
-BASE    = Path(__file__).parent.parent.parent   # raiz del repo
+BASE    = Path(__file__).parent.parent.parent
 DASH    = BASE / "data" / "dashboard"
 PROC    = BASE / "data" / "processed"
 MODELS  = BASE / "models"
@@ -64,11 +64,42 @@ def cargar_encoder():
     with open(MODELS / "target_encoder.pkl", "rb") as f:
         return pickle.load(f)
 
-# ── Clusters ─────────────────────────────────────────────────────
+# ── EDA Reports ──────────────────────────────────────────────────
 
 @st.cache_data(show_spinner=False)
-def cargar_clusters():
-    return pd.read_parquet(PROC / "ipress_clusters.parquet")
+def cargar_eda_univariado():
+    try:
+        return pd.read_csv(REPORTS / "eda_univariado_summary.csv")
+    except Exception:
+        return pd.DataFrame()
+
+@st.cache_data(show_spinner=False)
+def cargar_eda_bivariado():
+    try:
+        return pd.read_csv(REPORTS / "eda_bivariado_summary.csv")
+    except Exception:
+        return pd.DataFrame()
+
+@st.cache_data(show_spinner=False)
+def cargar_eda_multivariado():
+    try:
+        return pd.read_csv(REPORTS / "eda_multivariado_summary.csv")
+    except Exception:
+        return pd.DataFrame()
+
+@st.cache_data(show_spinner=False)
+def cargar_correlaciones():
+    try:
+        return pd.read_csv(REPORTS / "correlaciones_con_target.csv")
+    except Exception:
+        return pd.DataFrame()
+
+@st.cache_data(show_spinner=False)
+def cargar_shap():
+    try:
+        return pd.read_csv(REPORTS / "shap_importancias.csv")
+    except Exception:
+        return pd.DataFrame()
 
 # ── Reports ──────────────────────────────────────────────────────
 
